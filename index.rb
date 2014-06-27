@@ -1,9 +1,14 @@
 require 'rubygems'
 require 'sinatra'
 
-set :run, true
-set :views, File.dirname(__FILE__) + "/views"
-
 get '/' do
-  erb :index
+    erb :index, :layout => :layout
+end
+
+get '/graphs' do
+    erb :graphs, :layout => :layout
+end
+
+get '/data' do
+    erb :data, :layout => :layout
 end
